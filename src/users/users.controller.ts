@@ -2,12 +2,12 @@ import { UseGuards, Body, Controller, Post, Get, Patch, Param, Query, Delete, No
 import { createUserDto } from './dtos/create-user.dto';
 import { UpdateUserDto } from './dtos/update-user.dto';
 import { UsersService } from './users.service';
-import { serialize } from 'src/interceptors/serialize.interceptor';
+import { serialize } from '../interceptors/serialize.interceptor';
 import { UserDto } from './dtos/user.dto';
 import { AuthService } from './auth.service';
 import { CurrentUser } from './decorators/current-user.decorator';
 import { User } from './users.entity';
-import { AuthGuard } from 'src/guards/auth.guards';
+import { AuthGuard } from '../guards/auth.guards';
 @Controller('auth')
 @serialize(UserDto)
 
